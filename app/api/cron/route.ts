@@ -6,6 +6,24 @@ export async function GET() {
   try {
     const now = new Date()
 
+    // 만료된 이벤트 삭제 (60일 지난 것)
+    const { data: expiredByDate } = await supabaseAdmin
+      .from('events')
+      .select('id')
+      .lt('expires_at', now.toISOString())
+
+    for (const event of expiredByDate ?? []) {
+      await supabaseAdmin
+        .from('responses')
+        .delete()
+        .eq('event_id', event.id)
+
+      await supabaseAdmin
+        .from('events')
+        .delete()
+        .eq('id', event.id)
+    }
+
     // 마감일 지난 이벤트 잠금 처리
     const { data: expiredEvents } = await supabaseAdmin
       .from('events')

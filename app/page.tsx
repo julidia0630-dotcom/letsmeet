@@ -233,7 +233,7 @@ export default function Home() {
 <div className="flex items-start gap-2 px-4 py-3 bg-amber-50 border border-amber-100 rounded-xl mb-4">
   <span className="text-amber-400 mt-0.5">⚠️</span>
   <p className="text-xs text-amber-600">
-    이벤트 생성 후에는 날짜 범위를 수정할 수 없어요. 신중하게 입력해주세요.
+    이벤트 생성 후에는 날짜 범위를 수정할 수 없으며, 생성 후 60일이 지나면 자동으로 삭제돼요.
   </p>
 </div>
 

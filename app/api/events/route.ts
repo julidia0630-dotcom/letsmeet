@@ -23,16 +23,17 @@ export async function POST(req: NextRequest) {
     const { data, error } = await supabaseAdmin
       .from('events')
       .insert({
-        title,
-        host_name,
-        host_email,
-        date_range_start,
-        date_range_end,
-        excluded_weekdays: excluded_weekdays ?? [],
-        selection_mode: selection_mode ?? 'range',
-        deadline: deadline ?? null,
-        notify_mode: notify_mode ?? 'instant',
-      })
+      title,
+      host_name,
+      host_email,
+      date_range_start,
+      date_range_end,
+      excluded_weekdays: excluded_weekdays ?? [],
+      selection_mode: selection_mode ?? 'range',
+      deadline: deadline ?? null,
+      notify_mode: notify_mode ?? 'instant',
+      expires_at: new Date(Date.now() + 60 * 24 * 60 * 60 * 1000).toISOString(),
+})
       .select()
       .single()
 
