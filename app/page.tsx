@@ -227,11 +227,18 @@ export default function Home() {
         </div>
 
         {error && (
-          <p className="text-red-400 text-sm mb-4 px-1">{error}</p>
-        )}
+  <p className="text-red-400 text-sm mb-4 px-1">{error}</p>
+)}
 
-        <button
-          onClick={handleSubmit}
+<div className="flex items-start gap-2 px-4 py-3 bg-amber-50 border border-amber-100 rounded-xl mb-4">
+  <span className="text-amber-400 mt-0.5">⚠️</span>
+  <p className="text-xs text-amber-600">
+    이벤트 생성 후에는 날짜 범위를 수정할 수 없어요. 신중하게 입력해주세요.
+  </p>
+</div>
+
+<button
+  onClick={handleSubmit}
           disabled={loading}
           className="w-full h-13 py-3.5 bg-stone-800 text-white rounded-2xl font-medium text-sm hover:bg-stone-700 transition-colors disabled:opacity-50 shadow-sm"
         >
