@@ -191,7 +191,6 @@ export default function ResultPage() {
                         }).join(', ')}
                       </p>
                     </div>
-                    <span className="text-xs text-gray-300 mt-0.5">{r.available_dates.length}일</span>
                   </div>
                 )
               })}

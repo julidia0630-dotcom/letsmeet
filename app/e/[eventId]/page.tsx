@@ -155,7 +155,6 @@ export default function EventPage() {
         <div className="bg-white rounded-2xl border border-gray-100 p-6 mb-4">
           <div className="flex items-center justify-between mb-4">
             <p className="text-xs font-medium text-gray-400 uppercase tracking-wider">가능한 날짜 선택</p>
-            <span className="text-xs text-gray-400">{selectedDates.length}일 선택됨</span>
           </div>
 
           <div className="flex items-center justify-between mb-4">
