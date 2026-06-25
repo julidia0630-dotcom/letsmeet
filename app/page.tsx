@@ -137,7 +137,7 @@ export default function Home() {
           <p className="text-xs font-semibold text-stone-800 uppercase tracking-wider mb-4">조율 기간</p>
           <div className="flex gap-3 mb-5">
             <div className="flex-1">
-              <p className="text-xs text-stone-400 mb-1.5">출발 가능일</p>
+              <p className="text-xs text-stone-400 mb-1.5">시작 날짜</p>
               <input
                 type="date"
                 className="w-full h-11 px-4 rounded-xl border border-stone-200 text-sm focus:outline-none focus:border-orange-300 bg-stone-50 transition-colors"
@@ -148,7 +148,7 @@ export default function Home() {
             </div>
             <div className="flex items-end pb-2.5 text-stone-300">→</div>
             <div className="flex-1">
-              <p className="text-xs text-stone-400 mb-1.5">도착 가능일</p>
+              <p className="text-xs text-stone-400 mb-1.5">마지막 날짜</p>
               <input
                 type="date"
                 className="w-full h-11 px-4 rounded-xl border border-stone-200 text-sm focus:outline-none focus:border-orange-300 bg-stone-50 transition-colors"
